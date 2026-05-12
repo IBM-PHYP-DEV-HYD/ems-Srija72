@@ -24,8 +24,8 @@ public:
     bool isEmpty();
     void clear();
     void display();
-    void pushFront(T vlaueParm);
-    void pushBack(T vlaueParm);
+    void pushFront(T valueParm);
+    void pushBack(T valueParm);
     bool popFront();
     bool popRear();
     T firstElement();
@@ -33,80 +33,10 @@ public:
     T getNthElement(int nthElementParm);
     void resize(T dataParm, int newSizeParm, int directionParm);
     int getSize();
-    // Node* getNode(int indexParm);
-    // T& operator[](int indexParm);
-    // void removeAt(int indexParm);
-    // void insertAt(int indexParm, T valParm);
-    //Operator Overloading
-    // template<typename T>
-    Node* getNode(int indexParm) {
-        if (indexParm < 0 || indexParm >= mLength) return nullptr;
-
-        Node* sTemp = mFront;
-        for (int i = 0; i < indexParm; i++) {
-            sTemp = sTemp->mNext;
-        }
-        return sTemp;
-    }
-    // template<typename T>
-    T& operator[](int indexParm) {
-        return getNode(indexParm)->mData;
-    }
-    // template<typename T>
-    void insertAt(int indexParm, T valParm) {
-        if (indexParm < 0 || indexParm > mLength) return;
-        Node* sNewnode = new Node{valParm, nullptr, nullptr};
-
-        if (mLength == 0) {
-            mFront = mRear = sNewnode;
-        }
-        else if (indexParm == 0) {
-            sNewnode->mNext = mFront;
-            mFront->mPrev = sNewnode;
-            mFront = sNewnode;
-        }
-        else if (indexParm == mLength) {
-            sNewnode->mPrev = mRear;
-            mRear->mNext = sNewnode;
-            mRear = sNewnode;
-        }
-        else {
-            Node* sCurr = getNode(indexParm);
-            sNewnode->mPrev = sCurr->mPrev;
-            sNewnode->mNext = sCurr;
-
-            sCurr->mPrev->mNext = sNewnode;
-            sCurr->mPrev = sNewnode;
-        }
-
-        mLength++;
-    }
-    // template<typename T>
-    void removeAt(int indexParm) {
-        if (indexParm < 0 || indexParm >= mLength) return;
-
-        Node* sTemp = getNode(indexParm);
-
-        if (mLength == 1) {
-            mFront = mRear = nullptr;
-        }
-        else if (indexParm == 0) {
-            mFront = mFront->mNext;
-            mFront->mPrev = nullptr;
-        }
-        else if (indexParm == mLength - 1) {
-            mRear = mRear->mPrev;
-            mRear->mNext = nullptr;
-        }
-        else {
-            sTemp->mPrev->mNext = sTemp->mNext;
-            sTemp->mNext->mPrev = sTemp->mPrev;
-        }
-
-        delete sTemp;
-        mLength--;
-    }
-
+    Node* getNode(int indexParm);
+    T& operator[](int indexParm);
+    void removeAt(int indexParm);
+    void insertAt(int indexParm, T valParm);    
 
 };
 // To create an empty dequqe 
@@ -161,9 +91,9 @@ void MyDeque<T>::display(){
 
 //To ADD element in FRONT
 template<typename T>
-void MyDeque<T>::pushFront(T vlaueParm){
+void MyDeque<T>::pushFront(T valueParm){
     struct Node * sNewnode = new Node;
-    sNewnode -> mData = vlaueParm;
+    sNewnode -> mData = valueParm;
     sNewnode ->mPrev = nullptr;
     sNewnode ->mNext = mFront;        
     if(isEmpty()){
@@ -182,10 +112,12 @@ void MyDeque<T>::pushBack(T valueParm){
     struct Node * sNewnode = new Node;
     sNewnode -> mData = valueParm;
     sNewnode -> mNext = nullptr;
+    sNewnode -> mPrev = nullptr;
     if(isEmpty()){
         mFront = mRear = sNewnode;
     }
     else{
+        sNewnode -> mPrev = mRear;
         mRear -> mNext = sNewnode;
         mRear = sNewnode;
     }
@@ -307,6 +239,74 @@ void MyDeque<T>::resize(T dataParm, int newSizeParm, int directionParm){
 template<typename T>
 int MyDeque<T>::getSize(){
     return mLength ;
+}
+template<typename T>
+typename MyDeque<T>::Node* MyDeque<T>::getNode(int indexParm) {
+    if (indexParm < 0 || indexParm >= mLength) return nullptr;
+
+    Node* sTemp = mFront;
+    for (int i = 0; i < indexParm; i++) {
+        sTemp = sTemp->mNext;
+    }
+    return sTemp;
+}
+template<typename T>
+T& MyDeque<T>::operator[](int indexParm) {
+    return getNode(indexParm)->mData;
+    }
+template<typename T>
+void MyDeque<T>::insertAt(int indexParm, T valParm) {
+    if (indexParm < 0 || indexParm > mLength) return;
+    Node* sNewnode = new Node{valParm, nullptr, nullptr};
+
+    if (mLength == 0) {
+        mFront = mRear = sNewnode;
+    }
+    else if (indexParm == 0) {
+        sNewnode->mNext = mFront;
+        mFront->mPrev = sNewnode;
+        mFront = sNewnode;
+    }
+    else if (indexParm == mLength) {
+        sNewnode->mPrev = mRear;
+        mRear->mNext = sNewnode;
+        mRear = sNewnode;
+    }
+    else {
+        Node* sCurr = getNode(indexParm);
+        sNewnode->mPrev = sCurr->mPrev;
+        sNewnode->mNext = sCurr;
+
+        sCurr->mPrev->mNext = sNewnode;
+        sCurr->mPrev = sNewnode;
+    }
+
+    mLength++;
+}
+template<typename T>
+void MyDeque<T>::removeAt(int indexParm) {
+    if (indexParm < 0 || indexParm >= mLength) return;
+
+    Node* sTemp = getNode(indexParm);
+
+    if (mLength == 1) {
+        mFront = mRear = nullptr;
+    }
+    else if (indexParm == 0) {
+        mFront = mFront->mNext;
+        mFront->mPrev = nullptr;
+    }
+    else if (indexParm == mLength - 1) {
+        mRear = mRear->mPrev;
+        mRear->mNext = nullptr;
+    }
+    else {
+        sTemp->mPrev->mNext = sTemp->mNext;
+        sTemp->mNext->mPrev = sTemp->mPrev;
+    }
+
+    delete sTemp;
+    mLength--;
 }
 
 #endif
