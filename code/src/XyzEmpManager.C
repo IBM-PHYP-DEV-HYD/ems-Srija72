@@ -281,3 +281,36 @@ bool XyzEmployeeManager::hasActiveEmployees(){
     }
     return true;
 }
+// Add a random employee
+void XyzEmployeeManager::addRandomEmployee(){
+    string sName = generateRandomName();
+    Employee::Gender sGender = Employee::GenderFromInt(getRandomNumber(1, 3));
+    
+    string sDoB = generateRandomDate(1966, 2008);
+    int sDobYear = getYear(sDoB);
+    
+    int minDojYear = sDobYear + 18;
+    int maxDojYear = 2026;
+    string sDoJ = generateRandomDate(minDojYear, maxDojYear);
+    
+    Employee::EmployeeType sEmpType = Employee::EmployeeTypeFromInt(getRandomNumber(1, 3));
+    
+    string sEmpId;
+    
+    if(sEmpType == Employee::Full_Time){
+        double sSalary = getRandomNumber(30000, 150000);
+        sEmpId = "XYZ" + to_string(getRandomNumber(1000, 1999)) + "F";
+        addEmployee(sName, sEmpId, sGender, sDoB, sDoJ, sSalary);
+    }
+    else if(sEmpType == Employee::Intern){
+        Employee::College sCollege = Employee::CollegeFromint(getRandomNumber(1, 7));
+        Employee::Branch sBranch = Employee::BranchFromint(getRandomNumber(1, 3));
+        sEmpId = "XYZ" + to_string(getRandomNumber(1000, 1999)) + "I";
+        addEmployee(sName, sEmpId, sGender, sDoB, sDoJ, sBranch, sCollege);
+    }
+    else if(sEmpType == Employee::Contractor){
+        Employee::Agency sAgency = Employee::AgencyFromint(getRandomNumber(1, 3));
+        sEmpId = "XYZ" + to_string(getRandomNumber(1000, 1999)) + "C";
+        addEmployee(sName, sEmpId, sGender, sDoB, sDoJ, sAgency);
+    }
+}

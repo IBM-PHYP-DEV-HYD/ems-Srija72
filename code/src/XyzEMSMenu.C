@@ -128,16 +128,16 @@ void EMSMenu :: mainMenu(){
 // Function to handle user input 
 void EMSMenu :: handleUserChoice(int parmChoice){
     switch(parmChoice){
-        case SubMenu::Add : 
+        case Menu::Options::Add : 
             displayAddmenu();
             break;
-        case SubMenu::Remove :
+        case Menu::Options::Remove :
             displayRemovemenu();
             break;
-        case SubMenu::Get :
+        case Menu::Options::Get :
             displayGetDetailsMenu();
             break;
-        case SubMenu::Other:
+        case Menu::Options::Other:
             displayOtherMenu();
             break;
         default :
@@ -177,7 +177,7 @@ void EMSMenu :: displayAddmenu(){
             break;
         }
         switch(sChoice){
-            case AddMenu :: Add:{
+            case Menu::AddMenu::AddManually:{
                 sName = readName();
                 sGender = readGender();
                 while(true){
@@ -234,8 +234,8 @@ void EMSMenu :: displayAddmenu(){
                 break;
                 }
 
-            case AddMenu :: Random:{
-                cout<<"Random Employee : \n";   
+            case Menu::AddMenu :: Random:{
+                mManager->addRandomEmployee();
                 break;
             }
 
@@ -269,7 +269,7 @@ void EMSMenu :: displayRemovemenu(){
             break;
         }
         switch(sChoice){
-            case RemoveMenu :: Remove :
+            case Menu::RemoveMenu::RemoveById:
                 cout<<"Enter the Employee ID :";
                 cin>>sEmpId;
                 while(true){
@@ -315,14 +315,14 @@ void EMSMenu :: displayGetDetailsMenu(){
             break;
         }
         switch(sChoice){
-            case GetDetails :: All:
+            case Menu::GetDetails :: All:
                 mManager->printAllEmployees();
                 break;
-            case GetDetails :: Type:
+            case Menu::GetDetails :: Type:
                 sEmpType = readEmployeeType();
                 mManager->printEmpByType(sEmpType);
                 break;
-            case GetDetails :: Status:
+            case Menu::GetDetails :: Status:
                 while(true){
                     cout<<"Select the Employee state to be displayed :\n";
                     cout<<"1.Active\n2.Inactive\n3.Resigend\n";
@@ -371,7 +371,7 @@ void EMSMenu :: displayOtherMenu(){
             break;
         }
         switch(sChoice){
-            case Others:: Leaves:
+            case Menu::Others:: Leaves:
                 while(true){
                     cout<<"Enter Emp Id:";
                     cin>>sEmpId;
@@ -388,7 +388,7 @@ void EMSMenu :: displayOtherMenu(){
                 }
                 mManager->leavesAvailed(sEmpId,sLeaveAvailed);
                 break;
-            case Others:: Convert:
+            case Menu::Others:: Convert:
                 cout<<"Enter Emp Id:";
                 cin>>sEmpId;
                 while(true){
@@ -401,21 +401,21 @@ void EMSMenu :: displayOtherMenu(){
                 }
                 mManager->promoteEmployee(sEmpId,sSalary);
                 break;
-            case Others:: SeachById:
+            case Menu::Others:: SeachById:
                 cout<<"Enter Emp Id:";
                 cin>>sEmpId;
                 mManager->searchEmployeebyId(sEmpId);
                 break;
-            case Others:: SearchByname:
+            case Menu::Others:: SearchByname:
                 sName = readName();
                 mManager->searchEmployeebyName(sName);
                 break;
-            case Others:: Assignment:
+            case Menu::Others:: Assignment:
                 cout<<"Enter Emp Id:";
                 cin>>sEmpId;
                 mManager->updateAssignmentStatus(sEmpId);
                 break;
-            case Others:: Total:
+            case Menu::Others:: Total:
                 mManager->getTotalCountoEmp();
                 break;
             default:

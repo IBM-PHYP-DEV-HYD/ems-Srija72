@@ -13,4 +13,7 @@ int getYear(string yearParm);
 int getRandomNumber(int startNumParm,
                     int endNumParm);
 
+string generateRandomDate(int minYear, int maxYear);
+string generateRandomName();
+
 #endif

@@ -34,6 +34,8 @@ public:
     bool hasEmployees(); 
     void getTotalCountoEmp();
     bool hasActiveEmployees(); 
+
+    void addRandomEmployee();
  
 
 };

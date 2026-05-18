@@ -2,33 +2,25 @@
 #define XyzEnums_H
 
 // Menu Related Enums 
-namespace SubMenu{
+namespace Menu{
     enum Options{
         Add=1,
         Remove,
         Get,
         Other,
     };
-}
-namespace AddMenu{
-    enum Options{
-        Add = 1,
+    enum AddMenu{
+        AddManually = 1,
         Random = 2,
     };
-}
-namespace RemoveMenu{
-    enum Options{
-        Remove =1,
+    enum RemoveMenu{
+        RemoveById =1,
     };
-}
-namespace GetDetails{
-    enum Options{
+    enum GetDetails{
         All=1,
         Type,
         Status,
     };
-}
-namespace Others{
     enum Others{
         Leaves =1,
         Convert,
@@ -37,7 +29,7 @@ namespace Others{
         Assignment,
         Total,
     };
-}
+};
 
 //Employee enums 
 namespace Employee{

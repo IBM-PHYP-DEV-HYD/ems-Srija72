@@ -77,7 +77,38 @@ int getRandomNumber(int startNumParm,
     int sRandomNumber = sGenerate(sRandomNumberGenerator);
     return sRandomNumber;
 }
-
+string generateRandomName() {
+    string firstNames[] = {"Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun",
+                          "Sai", "Arnav", "Ayaan", "Krishna", "Ishaan",
+                          "Ananya", "Diya", "Aadhya", "Saanvi", "Kiara",
+                          "Anika", "Navya", "Angel", "Pari", "Sara"};
+    
+    string lastNames[] = {"Sharma", "Verma", "Patel", "Kumar", "Singh",
+                         "Reddy", "Gupta", "Joshi", "Nair", "Iyer",
+                         "Mehta", "Desai", "Rao", "Pillai", "Menon"};
+    
+    int firstNameIndex = getRandomNumber(0, 19);
+    int lastNameIndex = getRandomNumber(0, 14);
+    
+    return firstNames[firstNameIndex] + " " + lastNames[lastNameIndex];
+}
+string generateRandomDate(int minYear, int maxYear) {
+    int year = getRandomNumber(minYear, maxYear);
+    int month = getRandomNumber(1, 12);
+    
+    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        daysInMonth[1] = 29;
+    }
+    
+    int day = getRandomNumber(1, daysInMonth[month - 1]);
+    
+    string dayStr = (day < 10 ? "0" : "") + to_string(day);
+    string monthStr = (month < 10 ? "0" : "") + to_string(month);
+        
+    return dayStr + "/" + monthStr + "/" + to_string(year);
+}
 
 
 
