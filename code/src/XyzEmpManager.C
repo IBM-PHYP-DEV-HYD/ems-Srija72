@@ -63,7 +63,7 @@ void XyzEmployeeManager::removeEmployeebyId(string empIdParm ,string leavingDate
         cout << "\033[31mEmployee with ID " << empIdParm << " not sFound in active employees!\033[0m\n";
     }
 }
-// Convert employee to full time
+// Promote an Employee
 void XyzEmployeeManager::promoteEmployee(string empIdParm, double salaryParm){
     if(!hasActiveEmployees()) return;    
     bool sFound = false;
@@ -74,10 +74,12 @@ void XyzEmployeeManager::promoteEmployee(string empIdParm, double salaryParm){
             if(emp->getEmpType() == "Full Time"){
                 cout << "\033[31mEmployee " << empIdParm << " is already a Full-Time employee!\033[0m\n";
                 return;
-            }            
+            }                        
+            string newEmpId = emp->getId();
+            newEmpId[newEmpId.length() - 1] = 'F';            
             XyzEmployeeIF* fullTimeEmp = EmployeeCreator::createXYZFullTime(
                 emp->getName(),
-                emp->getId(),
+                newEmpId,
                 emp->getGender(),
                 emp->getDob(),
                 emp->getDoj(),
@@ -89,7 +91,7 @@ void XyzEmployeeManager::promoteEmployee(string empIdParm, double salaryParm){
             activeEmployees.removeAt(i);
             activeEmployees.pushBack(fullTimeEmp);
             
-            cout << "\033[32mEmployee " << empIdParm << " promoted to Full-Time successfully!\033[0m\n";
+            cout << "\033[32mEmployee " << empIdParm << " promoted to Full-Time successfully with new ID: " << newEmpId << "!\033[0m\n";
             delete emp;
             break;
         }
@@ -98,6 +100,7 @@ void XyzEmployeeManager::promoteEmployee(string empIdParm, double salaryParm){
         cout << "\033[31mEmployee with ID " << empIdParm << " not sFound!\033[0m\n";
     }
 }
+
 
 // Update leaves availed
 void XyzEmployeeManager:: leavesAvailed(string empIdParm,int leavesParm){
