@@ -1,0 +1,187 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="rlYpM8-fAMqvEm2tNkT-">
+    <mxGraphModel dx="1005" dy="1901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="U2B1D6E_jObn1iCSqiG--13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;" value="XyzEmpBase&#xa;&#xa;" vertex="1">
+          <mxGeometry height="400" width="370" x="229" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--14" parent="U2B1D6E_jObn1iCSqiG--13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="mName : string&#xa;mEmpId : string&#xa;mGender : Employee::Gender&#xa;mDOJ : string&#xa;mDOB : string&#xa;mAssignmentStatus : Employee::AssignmentStatus&#xa;mEmpStatus : Employee::EmpStatu" vertex="1">
+          <mxGeometry height="114" width="370" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--15" parent="U2B1D6E_jObn1iCSqiG--13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="370" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--16" parent="U2B1D6E_jObn1iCSqiG--13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ XyzEmpBase(string nameParm, string empIdParm,             Employee::Gender genderParm, string DOBParm, string             DOJParm)&#xa;+ displayCommonDetails() : void&#xa;+ printSummary() : void&#xa;+ getName() : string&#xa;+ getId() : string&#xa;+ getDob() : string&#xa;+ getDoj() : string&#xa;+ getEmpStatus() : Employee::EmpStatus&#xa;+ getAssignmentStatus() : Employee::AssignmentStatus&#xa;+ getGender() : Employee::Gender&#xa;+ completeAssignment() : void&#xa;+ updateLeaves(int leavesParm) : void&#xa;+ printAdditionalSummary() : void = 0&#xa;+ getEmpType() : string = 0&#xa;+ displayDetails() : void = 0&#xa;" vertex="1">
+          <mxGeometry height="252" width="370" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;" value="XyzFullTimeEmployee" vertex="1">
+          <mxGeometry height="320" width="160" x="30" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--18" parent="U2B1D6E_jObn1iCSqiG--17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- mSalary : double&#xa;- mLeavesAvailed : int = 0&#xa;- mLeavesLeft : int = 22" vertex="1">
+          <mxGeometry height="64" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--19" parent="U2B1D6E_jObn1iCSqiG--17" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--20" parent="U2B1D6E_jObn1iCSqiG--17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+XyzFullTimeEmployee(string nameParm,&#xa;                      string empIdParm,&#xa;                      Employee::Gender genderParm,&#xa;                      string DOBParm,&#xa;                      string DOJParm,&#xa;                      double salaryParm)&#xa;+ displayDetails() : void&#xa;+ printAdditionalSummary() : void&#xa;+ getEmpType() : string&#xa;+ updateLeaves(int leavesParm) : void" vertex="1">
+          <mxGeometry height="222" width="160" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--21" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;" value="XyzEmployeeIF" vertex="1">
+          <mxGeometry height="230" width="480" x="190" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--23" parent="U2B1D6E_jObn1iCSqiG--21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ displayCommonDetails() : void = 0&#xa;+ printSummary() : void = 0&#xa;+ displayDetails() : void = 0&#xa;+ getId() : string = 0&#xa;+ getName() : string = 0&#xa;+ getEmpType() : string = 0&#xa;+ getGender() : Employee::Gender = 0&#xa;+ getEmpStatus() : Employee::EmpStatus = 0&#xa;+ getDob() : string = 0&#xa;+ getDoj() : string = 0&#xa;+ getAssignmentStatus() : Employee::AssignmentStatus = 0&#xa;+ updateLeaves(int leavesParm) : void = 0&#xa;+ completeAssignment() : void = 0" vertex="1">
+          <mxGeometry height="200" width="480" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--27" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;EMSMenu&lt;/span&gt;" vertex="1">
+          <mxGeometry height="300" width="420" x="200" y="-1000" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--28" parent="U2B1D6E_jObn1iCSqiG--27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;p data-pm-slice=&quot;1 1 []&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;- mManager : XyzEmployeeManager*&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="34" width="420" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--29" parent="U2B1D6E_jObn1iCSqiG--27" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="420" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--30" parent="U2B1D6E_jObn1iCSqiG--27" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=3;spacingRight=0;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;spacing=0;spacingTop=0;spacingBottom=0;" value="+ EMSMenu()                                                            &#xa;+ ~EMSMenu()                                                           &#xa;+ mainMenu() : void                                                    &#xa;+ handleUserChoice(int choiceParm) : void                              &#xa;+ readName() : string                                                  &#xa;+ displayAddmenu() : void                                              &#xa;+ displayRemovemenu() : void                                           &#xa;+ displayGetDetailsMenu() : void                                       &#xa;+ displayOtherMenu() : void                                            &#xa;+ readGender() : Employee::Gender                                      &#xa;+ readEmployeeType() : Employee::EmployeeType                          &#xa;+ readEmpStatus() : Employee::EmpStatus                                &#xa;+ readCollege() : Employee::College&#xa;+ readBranch() : Employee::Branch&#xa;+ readAgency() : Employee::Agency " vertex="1">
+          <mxGeometry height="232" width="420" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--31" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;" value="XyzEmployeeManager" vertex="1">
+          <mxGeometry height="470" width="680" x="100" y="-630" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--32" parent="U2B1D6E_jObn1iCSqiG--31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- activeEmployees : MyDeque&lt;XyzEmployeeIF*&gt;                            &#xa;- resignedEmployees : MyDeque&lt;XyzResignedEmployee*&gt;     " vertex="1">
+          <mxGeometry height="44" width="680" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--33" parent="U2B1D6E_jObn1iCSqiG--31" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="680" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--34" parent="U2B1D6E_jObn1iCSqiG--31" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ addEmployee(string nameParm, string empIdParm,Employee::Gender genderParm, string dobParm,&#xa;           &#x9;&#x9;&#x9;&#x9;string dojParm, double salaryParm) : void&#xa;&#xa;+ addEmployee(string nameParm, string empIdParm,Employee::Gender genderParm, string dobParm,&#xa;          &#x9;&#x9;&#x9;&#x9;string dojParm, Employee::Branch branchParm,Employee::College collegeParm) : void&#xa;&#xa;+ addEmployee(string nameParm, string empIdParm,Employee::Gender genderParm, string dobParm,&#xa;           &#x9;&#x9;&#x9;&#x9;string dojParm, Employee::Agency agencyParm) : void&#xa;&#xa;+ addEmployee(string nameParm, string empIdParm,Employee::Gender genderParm, string DOBParm,tring &#x9;&#x9;&#x9;&#x9;DOJParm, string leavingDateParm,Employee::AssignmentStatus assignmentStatusParm) : void&#xa;&#xa;+ removeEmployeebyId(string empIdParm, string leavingDateParm) : void&#xa;+ promoteEmployee(string empIdParm, double salaryParm) : void&#xa;+ leavesAvailed(string empIdParm, int leavesParm) : void&#xa;+ updateAssignmentStatus(string empIdParm) : void&#xa;+ printAllEmployees() : void&#xa;+ printEmpbyStatus(Employee::EmpStatus statusParm) : void&#xa;+ printEmpByType(Employee::EmployeeType typeParm) : void&#xa;+ searchEmployeebyId(string empIdParm) : void&#xa;+ searchEmployeebyName(string empNameparm) : void&#xa;+ hasEmployees() : bool&#xa;+ getTotalCountoEmp() : void&#xa;+ hasActiveEmployees() : bool&#xa;+ addRandomEmployee() : void" vertex="1">
+          <mxGeometry height="392" width="680" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--37" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;" value="EmployeeCreator" vertex="1">
+          <mxGeometry height="230" width="680" x="100" y="-60" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--38" parent="U2B1D6E_jObn1iCSqiG--37" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ createXYZFullTime(string nameParm,string empIdParm,Employee::GendergenderParm,string DOBParm,string DOJParm,&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;                                    double salaryParm) : XyzEmployeeIF*&#xa;+ createXYZIntern(string nameParm,string empIdParm,Employee::Gender genderParm,string dobParm,string                                      dojParm,Employee::Branch branchParm,Employee::College collegeParm) : XyzEmployeeIF*&#xa;&#xa;+ createXYZContract(string nameParm,string empIdParm,Employee::Gender genderParm,string dobParm,string                                     dojParm,Employee::Agency agencyParm) : XyzEmployeeIF*&#xa;&#xa;+ createResignedEmployee(string nameParm,string empIdParm,Employee::Gender genderParm,string DOBParm,string                         DOJParm,string leavingDate,Employee::AssignmentStatus assignmentStatusParm) : XyzResignedEmployee*&#xa;&#xa;+ createPromotedFullTime(XyzEmployeeIF* oldEmployee,double salary) : XyzEmployeeIF*" vertex="1">
+          <mxGeometry height="204" width="680" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--42" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="XyzInternEmployee" vertex="1">
+          <mxGeometry height="350" width="160" x="210" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--43" parent="U2B1D6E_jObn1iCSqiG--42" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- mCollegeName : Employee::College&#xa;- mBranchName : Employee::Branch" vertex="1">
+          <mxGeometry height="74" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--44" parent="U2B1D6E_jObn1iCSqiG--42" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--45" parent="U2B1D6E_jObn1iCSqiG--42" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ XyzInternEmployee(string nameParm,&#xa;                    string empIdParm,&#xa;                    Employee::Gender genderParm,&#xa;                    string dobParm,&#xa;                    string dojParm,&#xa;                    Employee::Branch branchParm,&#xa;                    Employee::College collegeParm)&#xa;+ displayDetails() : void&#xa;+ getEmpType() : string&#xa;+ printAdditionalSummary() : void" vertex="1">
+          <mxGeometry height="242" width="160" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--46" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="XyzContractorEmployee" vertex="1">
+          <mxGeometry height="320" width="160" x="445" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--47" parent="U2B1D6E_jObn1iCSqiG--46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- mEmpAgency : Employee::Agency" vertex="1">
+          <mxGeometry height="54" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--48" parent="U2B1D6E_jObn1iCSqiG--46" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--49" parent="U2B1D6E_jObn1iCSqiG--46" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ XyzContractorEmployee(string nameParm,&#xa;                        string empIdParm,&#xa;                        Employee::Gender genderParm,&#xa;                        string dobParm,&#xa;                        string dojParm,&#xa;                        Employee::Agency agencyParm)&#xa;+ displayDetails() : void&#xa;+ getEmpType() : string&#xa;+ printAdditionalSummary() : void" vertex="1">
+          <mxGeometry height="232" width="160" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--50" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="XyzResignedEmployee" vertex="1">
+          <mxGeometry height="310" width="160" x="650" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--51" parent="U2B1D6E_jObn1iCSqiG--50" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="- mLeavingDate : string" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--52" parent="U2B1D6E_jObn1iCSqiG--50" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--53" parent="U2B1D6E_jObn1iCSqiG--50" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+XyzResignedEmployee(string nameParm,&#xa;                      string empIdParm,&#xa;                      Employee::Gender genderParm,&#xa;                      string DOBParm,&#xa;                      string DOJParm,&#xa;                      string leavingDate,&#xa;                      Employee::AssignmentStatus assignmentStatusParm)&#xa;+ getEmpType() : string&#xa;+ displayDetails() : void&#xa;+ getLeavingDate() : string&#xa;+ printAdditionalSummary() : void" vertex="1">
+          <mxGeometry height="250" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--67" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;lt;&amp;lt;Enums&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Employee&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="380" width="620" x="150" y="1420" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--68" parent="U2B1D6E_jObn1iCSqiG--67" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="enum EmployeeType {Full_Time = 1,Intern,Contractor}&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;enum Gender {Male = 1,Female,Others}&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;enum EmpStatus {Active = 1,Inactive,Resigned}&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;enum AssignmentStatus {In_Progress = 1,Completed}&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;enum College {IIT_Delhi = 1, IT_Mumbai, IIT_Kanpur, IIT_Hyderabad,NIT_Warangal, NIT_Tiruchi, IIIT_Hyderabad}&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;enum Branch {CSE = 1, CSIT, ECE}&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;enum Agency {Avengers = 1, Justice_League, X_Men}&lt;div style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="124" width="620" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--69" parent="U2B1D6E_jObn1iCSqiG--67" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="620" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--70" parent="U2B1D6E_jObn1iCSqiG--67" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" value="+ toStringEmployeeType(EmployeeType) : string&#xa;+ toStringGender(Gender) : string&#xa;+ toStringAssignmentStatus(AssignmentStatus) : string&#xa;+ toStringEmpStatus(EmpStatus) : string&#xa;+ toStringCollege(College) : string&#xa;+ toStringBranch(Branch) : string&#xa;+ toStringAgency(Agency) : string&#xa;+ EmployeeTypeFromInt(int) : EmployeeType&#xa;+ GenderFromInt(int) : Gender&#xa;+ AssignmentStatusFromint(int) : AssignmentStatus&#xa;+ EmpStatusFromint(int) : EmpStatus&#xa;+ CollegeFromint(int) : College&#xa;+ BranchFromint(int) : Branch&#xa;+ AgencyFromint(int) : Agency" vertex="1">
+          <mxGeometry height="222" width="620" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--77" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="400" y="-700" as="sourcePoint" />
+            <mxPoint x="397" y="-630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--78" edge="1" parent="1" source="U2B1D6E_jObn1iCSqiG--34" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.442;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.439;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;" target="U2B1D6E_jObn1iCSqiG--37" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="323" y="-80" as="sourcePoint" />
+            <mxPoint x="320" y="-10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--80" edge="1" parent="1" source="U2B1D6E_jObn1iCSqiG--13" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.543;exitY=-0.007;exitDx=0;exitDy=0;exitPerimeter=0;" target="U2B1D6E_jObn1iCSqiG--23" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="430" y="450" as="sourcePoint" />
+            <mxPoint x="380" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--82" edge="1" parent="1" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="400" y="960" as="sourcePoint" />
+            <mxPoint x="400" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--85" edge="1" parent="1" source="U2B1D6E_jObn1iCSqiG--17" style="endArrow=none;html=1;rounded=0;exitX=0.554;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="119" y="960" />
+            </Array>
+            <mxPoint x="390" y="1090" as="sourcePoint" />
+            <mxPoint x="400" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--86" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;exitX=0.554;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="289.62" y="962" />
+            </Array>
+            <mxPoint x="289.62" y="1030" as="sourcePoint" />
+            <mxPoint x="289.62" y="962" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--87" edge="1" parent="1" source="U2B1D6E_jObn1iCSqiG--50" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="960" />
+            </Array>
+            <mxPoint x="480" y="1078" as="sourcePoint" />
+            <mxPoint x="400" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--88" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;exitX=0.554;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="962" />
+            </Array>
+            <mxPoint x="520" y="1030" as="sourcePoint" />
+            <mxPoint x="520" y="962" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--89" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Implements" vertex="1">
+          <mxGeometry height="30" width="60" x="430" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="U2B1D6E_jObn1iCSqiG--90" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.439;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="420" y="168" as="sourcePoint" />
+            <mxPoint x="420" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
